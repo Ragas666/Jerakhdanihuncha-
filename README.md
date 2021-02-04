@@ -7,5 +7,5 @@ OnetoMany
  - This is a web-based project java project created in Eclipse that uses the concept of MySql, xml, Maven, Controller and Autowire. It consists of Login page, EMployee             Registration Page and Employee Details page. 
     The flow of the program is from Jsp -> Controller -> Service Layer -> Dao Layer -> Database. 
     
-rupesh 
-- This is a simple 3 page website project I made using html, css, bootstrap, php, mySQL and Javascript.
+Business Website -XYZ Consulting LLC
+- A simple 3-page website project using html, CSS, bootstrap, php, MySQL and JavaScript and XAMPP server. Two forms are implemented in the project as “Submit” form and “Contact Us ” page in order to showcase functionality of the project. 
