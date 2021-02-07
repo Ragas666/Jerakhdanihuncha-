@@ -1,0 +1,82 @@
+package com.main.entity;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import org.springframework.web.multipart.MultipartFile;
+
+@Entity
+//@Table(name="employeeentity")
+public class EmployeeEntity {
+	int employeeId;
+	String employeeName;
+	String emailId;
+	String password;
+	int salary;
+	private byte[] tphoto;
+	private MultipartFile file;
+	
+	@Transient
+    public MultipartFile getFile() {
+		return file;
+	}
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
+	
+	@Column(name="photo",columnDefinition="longblob")
+	public byte[] getTphoto() {
+		return tphoto;
+	}
+	public void setTphoto(byte[] tphoto) {
+		this.tphoto = tphoto;
+	}
+
+	
+	@Id
+	@GeneratedValue
+	public int getEmployeeId() {
+		return employeeId;
+	}
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+	public String getEmployeeName() {
+		return employeeName;
+	}
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+	public String getEmailId() {
+		return emailId;
+	}
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public int getSalary() {
+		return salary;
+	}
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	@Override
+	public String toString() {
+		return "EmployeeEntity [employeeId=" + employeeId + ", employeeName=" + employeeName + ", emailId=" + emailId
+				+ ", password=" + password + ", salary=" + salary + "]";
+	}
+	
+	
+	
+
+}
